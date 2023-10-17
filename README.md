@@ -18,14 +18,12 @@ If you'd like to read about the steps I took throughout this software developmen
 
 ### 😋 1.1. Tasks
 In this warm-up of a stage, I:
-- Designed [our swagger.yaml file](swagger.yaml) to detail the routes we will be implementing for **TORU**,
+- Designed [our swagger.yaml file](swagger.yaml) to detail the routes I will be implementing for **TORU**,
 - Wrote out any relevant interfaces for documentation purposes,
 - Set up my project by:
-    - stubbing our code (and practising our Python scripting by writing a test file to check if we did this right),
-    - getting Spring Boot up and going, as well as our 
+    - stubbing our code (and practising our Python scripting by writing a test file to check if I did this right),
+    - getting Spring Boot up and going, as well as my
     - PostgreSQL database set up.
-
-And of course, we followed the best practices for git and teamwork. 😉
 
 ### 😋 1.2. Data Types
 | Variable Name | Type |
@@ -43,7 +41,7 @@ And of course, we followed the best practices for git and teamwork. 😉
 | is exactly **posts** | `Array` of objects, where each `object` contains the keys `{postId, sender, title, timeSent}` |
 
 ### 😋 1.3. Testing
-We have written a simple Python script *insert name* to test if we did this stage correctly or not. This script checks for whether our function stubs return the right things, and thus have been stubbed correctly according to our designed specification.
+I have written a simple Python script *insert name* to test if I did this stage correctly or not. This script checks for whether our function stubs return the right things, and thus have been stubbed correctly according to our designed specification.
 
 ## 🔍 2. Stage 1: Basic Functionality and Tests
 
