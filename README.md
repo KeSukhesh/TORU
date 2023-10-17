@@ -18,10 +18,10 @@ If you'd like to read about the steps I took throughout this software developmen
 
 ### 😋 1.1. Tasks
 In this warm-up of a stage, I:
-- Designed [our swagger.yaml file](swagger.yaml) to detail the routes I will be implementing for **TORU**,
+- Designed [my swagger.yaml file](swagger.yaml) to detail the routes I will be implementing for **TORU**,
 - Wrote out any relevant interfaces for documentation purposes,
 - Set up my project by:
-    - stubbing our code (and practising our Python scripting by writing a test file to check if I did this right),
+    - stubbing my code (and practising my Python scripting by writing a test file to check if I did this right),
     - getting Spring Boot up and going, as well as my
     - PostgreSQL database set up.
 
@@ -41,11 +41,11 @@ In this warm-up of a stage, I:
 | is exactly **posts** | `Array` of objects, where each `object` contains the keys `{postId, sender, title, timeSent}` |
 
 ### 😋 1.3. Testing
-I have written a simple Python script *insert name* to test if I did this stage correctly or not. This script checks for whether our function stubs return the right things, and thus have been stubbed correctly according to our designed specification.
+I have written a simple Python script *insert name* to test if I did this stage correctly or not. This script checks for whether my function stubs return the right things, and thus have been stubbed correctly according to my designed specification.
 
 ## 🔍 2. Stage 1: Basic Functionality and Tests
 
 ### 🔍 2.1. Tasks
 This stage consisted of two main stages:
  - ***Writing tests*** for the basic functionality of **TORU**. These tests will be as small and independent as possible, so we can identify why a particular test may be failing more easily, and they must also be black box unit tests.
-  - ***Implementing*** the basic functionality of **TORU**. The basic functionality is actually defined according to the interface section detailed in [our interface provided](swagger.yaml). 
+  - ***Implementing*** the basic functionality of **TORU**. The basic functionality is actually defined according to the interface section detailed in [the interface provided](swagger.yaml). 
