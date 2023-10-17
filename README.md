@@ -3,29 +3,27 @@
 
 ## Contents
 
-[[_TOC_]] - ok this is broken but we will fix later :D
+[[_TOC_]] - ok this is broken but I will fix it later :D
 
 ## Change Log
 N/A
 
 ## 🫡 0. Overview 
-Hello! @h-noir and I (@KeSukhesh) are first year computer science students at UNSW!
+Hello! **TORU**, a project management web app is something I am developing in hopes of teaching myself OOP with Java, FE with React and TS, Dbs with postgreSQL and becoming a better software engineer having made this (to-be) serverless web app.
 
-We are collaborating on **TORU**, a project management web-app in hopes to self teach OOP with Java, FE with React and TS, Dbs with postgreSQL and to become better software engineers having made this (to-be) serverless web-app.
-
-If you'd like to read about the steps we took throughout this software development process, we'll be updating this README.md file below, detailing our journey taken along this project.
+If you'd like to read about the steps I took throughout this software development process, I'll be updating this README.md file below, detailing my journey taken along this project.
 
 
 ## 😋 1. Stage 0: Getting Started
 
 ### 😋 1.1. Tasks
-In this warm-up of a stage, we:
+In this warm-up of a stage, I:
 - Designed [our swagger.yaml file](swagger.yaml) to detail the routes we will be implementing for **TORU**,
 - Wrote out any relevant interfaces for documentation purposes,
-- Set up our project by:
-    - stubbing our code (and practice our python scripting by writing a test file to check if we did this right),
+- Set up my project by:
+    - stubbing our code (and practising our Python scripting by writing a test file to check if we did this right),
     - getting Spring Boot up and going, as well as our 
-    - postgreSQL database set up.
+    - PostgreSQL database set up.
 
 And of course, we followed the best practices for git and teamwork. 😉
 
@@ -45,11 +43,11 @@ And of course, we followed the best practices for git and teamwork. 😉
 | is exactly **posts** | `Array` of objects, where each `object` contains the keys `{postId, sender, title, timeSent}` |
 
 ### 😋 1.3. Testing
-We have written a simple python script *insert name* to test if we did this stage correctly or not. This script checks for whether our function stubs return the right things, and thus have been stubbed correctly according to our designed specificiaton.
+We have written a simple Python script *insert name* to test if we did this stage correctly or not. This script checks for whether our function stubs return the right things, and thus have been stubbed correctly according to our designed specification.
 
 ## 🔍 2. Stage 1: Basic Functionality and Tests
 
 ### 🔍 2.1. Tasks
 This stage consisted of two main stages:
- - ***Writing tests*** for the basic functionality of **TORU**. These tests will be as small and independent as possible, so we can identify why a particular test may be failing easier, and must also be black box unit tests.
-  - ***Implementing*** the basic functionality of **TORU**. The basic functionality is defined as per the interface section detailed in [our interface provided](swagger.yaml). 
+ - ***Writing tests*** for the basic functionality of **TORU**. These tests will be as small and independent as possible, so we can identify why a particular test may be failing more easily, and they must also be black box unit tests.
+  - ***Implementing*** the basic functionality of **TORU**. The basic functionality is actually defined according to the interface section detailed in [our interface provided](swagger.yaml). 
