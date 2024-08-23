@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kesukhesh/projects/TORU/src/core/tradingengine
+CXX_INCLUDES = -I/home/kesukhesh/projects/TORU/include
 
 CXX_FLAGS = -std=gnu++20
 

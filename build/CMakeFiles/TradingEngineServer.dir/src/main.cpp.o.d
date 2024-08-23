@@ -198,7 +198,7 @@ CMakeFiles/TradingEngineServer.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/kesukhesh/projects/TORU/src/core/tradingengine/TradingEngineServer.h \
+ /home/kesukhesh/projects/TORU/include/core/tradingengine/TradingEngineServer.h \
  /usr/include/c++/11/atomic /usr/include/c++/11/thread \
  /usr/include/c++/11/stop_token /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/semaphore /usr/include/c++/11/bits/semaphore_base.h \
@@ -210,10 +210,10 @@ CMakeFiles/TradingEngineServer.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/kesukhesh/projects/TORU/src/core/tradingengine/ILogger.h \
- /home/kesukhesh/projects/TORU/src/core/tradingengine/TradingEngineServerConfiguration.h \
- /home/kesukhesh/projects/TORU/src/core/tradingengine/ITradingEngineServer.h \
- /home/kesukhesh/projects/TORU/src/core/tradingengine/BackgroundService.h \
+ /home/kesukhesh/projects/TORU/include/core/tradingengine/ILogger.h \
+ /home/kesukhesh/projects/TORU/include/core/tradingengine/TradingEngineServerConfiguration.h \
+ /home/kesukhesh/projects/TORU/include/core/tradingengine/ITradingEngineServer.h \
+ /home/kesukhesh/projects/TORU/include/core/tradingengine/BackgroundService.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
@@ -224,4 +224,4 @@ CMakeFiles/TradingEngineServer.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/kesukhesh/projects/TORU/src/core/tradingengine/ConsoleLogger.h
+ /home/kesukhesh/projects/TORU/include/core/tradingengine/ConsoleLogger.h

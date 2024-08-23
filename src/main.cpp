@@ -1,8 +1,8 @@
 #include <memory>
 
-#include "TradingEngineServer.h"
-#include "ConsoleLogger.h"
-#include "TradingEngineServerConfiguration.h"
+#include "core/tradingengine/TradingEngineServer.h"
+#include "core/tradingengine/ConsoleLogger.h"
+#include "core/tradingengine/TradingEngineServer.h"
 
 int main() {
     auto logger = std::make_shared<ConsoleLogger>();
