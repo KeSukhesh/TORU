@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/TradingEngineServer.dir/src/main.cpp.o CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o -o TradingEngineServer
