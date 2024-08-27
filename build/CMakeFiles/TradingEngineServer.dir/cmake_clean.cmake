@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o"
+  "CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o.d"
   "CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o"
   "CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o.d"
-  "CMakeFiles/TradingEngineServer.dir/src/main.cpp.o"
-  "CMakeFiles/TradingEngineServer.dir/src/main.cpp.o.d"
   "TradingEngineServer"
   "TradingEngineServer.pdb"
 )

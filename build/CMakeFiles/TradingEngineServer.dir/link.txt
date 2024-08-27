@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/TradingEngineServer.dir/src/main.cpp.o CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o -o TradingEngineServer
+/usr/bin/c++ -g CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o -o TradingEngineServer  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0

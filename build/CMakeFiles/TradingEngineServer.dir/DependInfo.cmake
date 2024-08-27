@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool/ThreadPool.cpp" "CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o" "gcc" "CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o.d"
   "/home/kesukhesh/projects/TORU/src/core/tradingengine/TradingEngineServer.cpp" "CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o" "gcc" "CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o.d"
-  "/home/kesukhesh/projects/TORU/src/main.cpp" "CMakeFiles/TradingEngineServer.dir/src/main.cpp.o" "gcc" "CMakeFiles/TradingEngineServer.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

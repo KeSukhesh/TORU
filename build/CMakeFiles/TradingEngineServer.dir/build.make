@@ -69,24 +69,10 @@ include CMakeFiles/TradingEngineServer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TradingEngineServer.dir/flags.make
 
-CMakeFiles/TradingEngineServer.dir/src/main.cpp.o: CMakeFiles/TradingEngineServer.dir/flags.make
-CMakeFiles/TradingEngineServer.dir/src/main.cpp.o: /home/kesukhesh/projects/TORU/src/main.cpp
-CMakeFiles/TradingEngineServer.dir/src/main.cpp.o: CMakeFiles/TradingEngineServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kesukhesh/projects/TORU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TradingEngineServer.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TradingEngineServer.dir/src/main.cpp.o -MF CMakeFiles/TradingEngineServer.dir/src/main.cpp.o.d -o CMakeFiles/TradingEngineServer.dir/src/main.cpp.o -c /home/kesukhesh/projects/TORU/src/main.cpp
-
-CMakeFiles/TradingEngineServer.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TradingEngineServer.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kesukhesh/projects/TORU/src/main.cpp > CMakeFiles/TradingEngineServer.dir/src/main.cpp.i
-
-CMakeFiles/TradingEngineServer.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TradingEngineServer.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kesukhesh/projects/TORU/src/main.cpp -o CMakeFiles/TradingEngineServer.dir/src/main.cpp.s
-
 CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o: CMakeFiles/TradingEngineServer.dir/flags.make
 CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o: /home/kesukhesh/projects/TORU/src/core/tradingengine/TradingEngineServer.cpp
 CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o: CMakeFiles/TradingEngineServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kesukhesh/projects/TORU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kesukhesh/projects/TORU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o -MF CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o.d -o CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o -c /home/kesukhesh/projects/TORU/src/core/tradingengine/TradingEngineServer.cpp
 
 CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.i: cmake_force
@@ -97,17 +83,32 @@ CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kesukhesh/projects/TORU/src/core/tradingengine/TradingEngineServer.cpp -o CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.s
 
+CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o: CMakeFiles/TradingEngineServer.dir/flags.make
+CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o: /home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool/ThreadPool.cpp
+CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o: CMakeFiles/TradingEngineServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kesukhesh/projects/TORU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o -MF CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o.d -o CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o -c /home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool/ThreadPool.cpp
+
+CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool/ThreadPool.cpp > CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.i
+
+CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool/ThreadPool.cpp -o CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.s
+
 # Object files for target TradingEngineServer
 TradingEngineServer_OBJECTS = \
-"CMakeFiles/TradingEngineServer.dir/src/main.cpp.o" \
-"CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o"
+"CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o" \
+"CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o"
 
 # External object files for target TradingEngineServer
 TradingEngineServer_EXTERNAL_OBJECTS =
 
-TradingEngineServer: CMakeFiles/TradingEngineServer.dir/src/main.cpp.o
 TradingEngineServer: CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o
+TradingEngineServer: CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o
 TradingEngineServer: CMakeFiles/TradingEngineServer.dir/build.make
+TradingEngineServer: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0
 TradingEngineServer: CMakeFiles/TradingEngineServer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kesukhesh/projects/TORU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TradingEngineServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TradingEngineServer.dir/link.txt --verbose=$(VERBOSE)
