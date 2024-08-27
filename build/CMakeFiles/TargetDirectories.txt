@@ -1,3 +1,0 @@
-/home/kesukhesh/projects/TORU/build/CMakeFiles/TradingEngineServer.dir
-/home/kesukhesh/projects/TORU/build/CMakeFiles/edit_cache.dir
-/home/kesukhesh/projects/TORU/build/CMakeFiles/rebuild_cache.dir
