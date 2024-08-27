@@ -8,6 +8,7 @@ endif()
 set(CMAKE_CXX_STANDARD 20)
 
 include_directories(${PROJECT_SOURCE_DIR}/include/core/trading_engine_threadpool)
+include_directories(${PROJECT_SOURCE_DIR}/include/core)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system)

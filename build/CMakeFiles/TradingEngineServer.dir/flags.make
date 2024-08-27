@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
 
-CXX_INCLUDES = -I/home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool
+CXX_INCLUDES = -I/home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool -I/home/kesukhesh/projects/TORU/include/core
 
 CXX_FLAGS = -g -std=gnu++20
 

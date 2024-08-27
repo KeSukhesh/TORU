@@ -7,6 +7,7 @@
 #include <iomanip>
 
 #include "ThreadPool.h"
+#include "logger/FileLogger.h"
 
 using boost::asio::ip::tcp;
 
@@ -68,6 +69,8 @@ void handle_connection(tcp::socket socket) {
 }
 
 int main(int argc, char* argv[]) {
+    FileLogger logger("server.log");
+    logger.setLogLevel(LogLevel::INFO);
     try {
         if (argc != 2) {
             std::cerr << "Usage: " << argv[0] << " <number_of_threads>" << std::endl;
@@ -83,41 +86,8 @@ int main(int argc, char* argv[]) {
         boost::asio::io_context io_context;
         tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), 7878));
 
-        std::cout << "Multithreaded Server Running with " << num_threads << " threads..." << std::endl;
-        while (true) {
-            auto socket = std::make_shared<tcp::socket>(io_context);
-            acceptor.accept(*socket);
 
-            // Use the thread pool to execute the connection handler
-            pool.execute([socket]() mutable {
-                handle_connection(std::move(*socket));
-            });
-        }
-    }
-    catch (std::exception& e) {
-        std::cerr << "Exception: " << e.what() << std::endl;
-    }
-
-    return 0;
-}
-
-int run_server(int argc, char* argv[]) {
-        try {
-        if (argc != 2) {
-            std::cerr << "Usage: " << argv[0] << " <number_of_threads>" << std::endl;
-            return 1;
-        }
-
-        int num_threads = std::stoi(argv[1]);
-        if (num_threads <= 0) {
-            std::cerr << "The number of threads must be a positive integer." << std::endl;
-            return 1;
-        }
-        ThreadPool pool(num_threads);
-        boost::asio::io_context io_context;
-        tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), 7878));
-
-        std::cout << "Multithreaded Server Running with " << num_threads << " threads..." << std::endl;
+        logger.logInfo("Multithreaded Trading Engine Server Started With " + std::to_string(num_threads) + " Threads...");
         while (true) {
             auto socket = std::make_shared<tcp::socket>(io_context);
             acceptor.accept(*socket);
@@ -128,7 +98,7 @@ int run_server(int argc, char* argv[]) {
         }
     }
     catch (std::exception& e) {
-        std::cerr << "Exception: " << e.what() << std::endl;
+        logger.logError("Entry Point Main Function Exception", e);
     }
 
     return 0;

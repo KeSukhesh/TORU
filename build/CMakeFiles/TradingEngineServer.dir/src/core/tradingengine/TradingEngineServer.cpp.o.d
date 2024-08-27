@@ -1145,4 +1145,7 @@ CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cp
  /usr/include/c++/11/queue /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_queue.h \
- /home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool/ThreadPool.tpp
+ /home/kesukhesh/projects/TORU/include/core/trading_engine_threadpool/ThreadPool.tpp \
+ /home/kesukhesh/projects/TORU/include/core/logger/FileLogger.h \
+ /home/kesukhesh/projects/TORU/include/core/logger/Logger.h \
+ /home/kesukhesh/projects/TORU/include/core/logger/LogLevel.h
