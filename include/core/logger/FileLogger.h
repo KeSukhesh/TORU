@@ -19,6 +19,9 @@ public:
 
     void setLogFile(const std::string& filename) {
         logFile_.open(filename, std::ios::app);
+        if (!logFile_.is_open()) {
+            throw std::runtime_error("Unable to open log file");
+        }
     }
 
 protected:
@@ -29,6 +32,7 @@ protected:
             std::cout << formattedMessage; // Console logging
             if (logFile_.is_open()) {
                 logFile_ << formattedMessage; // File logging
+                logFile_.flush();
             }
 
         }
