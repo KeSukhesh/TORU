@@ -48,12 +48,12 @@ public:
         throw ex;
     }
 
-    void Logger::logWarning(const std::string& module, const std::exception& ex) {
+    void logWarning(const std::string& module, const std::exception& ex) {
         log(LogLevel::WARNING, module);
         throw ex;
     }
 
-    void Logger::logError(const std::string& module, const std::exception& ex) {
+    void logError(const std::string& module, const std::exception& ex) {
         log(LogLevel::ERROR, module);
         throw ex;
     }
