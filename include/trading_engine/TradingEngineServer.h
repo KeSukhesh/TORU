@@ -1,12 +1,13 @@
 #pragma once
 
-#include <background_service/BackgroundService.h>
-#include <trading_engine/ServerConfiguration.h>
+#include <BackgroundService.h>
+#include <ServerConfiguration.h>
+#include <FileLogger.h>
 
 class TradingEngineServer : public BackgroundService {
 public:
-    TradingEngineServer(const std::string& configFilePath)
-        :  config_(ServerConfiguration(configFilePath)) {}
+    TradingEngineServer(const std::string& configFilePath, const std::string& logFilePath)
+        :  config_(ServerConfiguration(configFilePath)), BackgroundService(logFilePath) {}
 
     void run_trading_engine();
 
@@ -17,6 +18,5 @@ protected:
     virtual void handle_server_connection(tcp::socket socket) override;
 
 private:
-    // need logger
     ServerConfiguration config_;
 };

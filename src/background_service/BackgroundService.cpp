@@ -5,7 +5,7 @@ void BackgroundService::start_server() {
     boost::asio::io_context io_context;
     tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port_));
     // log start
-    std::cout << "Multithreaded Server Running with " << num_threads_ << " threads..." << std::endl;
+    // std::cout << "Multithreaded Server Running with " << num_threads_ << " threads..." << std::endl;
     while(true) {
         auto socket = std::make_shared<tcp::socket>(io_context);
         acceptor.accept(*socket);
