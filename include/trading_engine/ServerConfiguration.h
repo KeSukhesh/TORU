@@ -25,13 +25,12 @@ private:
 
     void parseConfigFile(const std::string& configFilePath) {
         std::ifstream configFile(configFilePath);
-        // can encapsualte this in try {} from engine class and throw exception ?
         if (configFile.is_open()) {
             nlohmann::json configJson;
             configFile >> configJson;
 
-            port_ = configJson.value("Port", 7878);  // Default to 7878 if not specified
-            numberOfThreads_ = configJson.value("NumberOfThreads", 1);  // Default to 1 if not specified
+            port_ = configJson.value("Port", 7878);
+            numberOfThreads_ = configJson.value("NumberOfThreads", 1);
         } else {
             std::cerr << "Unable to open config file: " << configFilePath << std::endl;
             port_ = 7878;

@@ -5,7 +5,9 @@
 
 void TradingEngineServer::run_trading_engine() {
     try {
-        start_server(config_->getPort());
+        set_server_port(config_->getPort());
+        set_num_threads(config_->getNumberOfThreads());
+        start_server();
     }
     catch (std::exception& e) {
         // log error;

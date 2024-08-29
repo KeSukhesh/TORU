@@ -6,8 +6,7 @@
 class TradingEngineServer : public BackgroundService {
 public:
     TradingEngineServer(const std::string& configFilePath)
-        : BackgroundService(ServerConfiguration(configFilePath).getNumberOfThreads()),
-          config_(std::make_shared<ServerConfiguration>(configFilePath)) {}
+        :  config_(std::make_shared<ServerConfiguration>(configFilePath)) {}
 
     void run_trading_engine();
 
@@ -18,6 +17,6 @@ protected:
     virtual void handle_server_connection(tcp::socket socket) override;
 
 private:
-    // logger
+    // need logger
     std::shared_ptr<ServerConfiguration> config_;
 };

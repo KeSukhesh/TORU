@@ -13,10 +13,10 @@ using boost::asio::ip::tcp;
 
 class BackgroundService {
 public:
-    BackgroundService(int num_threads) : num_threads_(num_threads) {}
+    BackgroundService();
 
 protected:
-    virtual void start_server(int port);
+    virtual void start_server();
     virtual void stop_server();
     virtual std::string read_file_to_string(const std::string& filename);
     virtual void handle_server_connection(tcp::socket socket);
@@ -25,7 +25,8 @@ protected:
     void set_num_threads(int num_threads) { num_threads_ = num_threads; }
     int get_server_port() { return port_; }
     void set_server_port(int port) { port_ = port; }
+
 private:
-    int num_threads_ = 0;
+    int num_threads_ = 1;
     int port_ = 7878;
 };
