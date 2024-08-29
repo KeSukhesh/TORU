@@ -1,9 +1,9 @@
 #include "background_service/BackgroundService.h"
 
-void BackgroundService::start_server(int port) {
+void BackgroundService::start_server() {
     ThreadPool pool(num_threads_);
     boost::asio::io_context io_context;
-    tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port));
+    tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port_));
     // log start
     std::cout << "Multithreaded Server Running with " << num_threads_ << " threads..." << std::endl;
     while(true) {
