@@ -1,16 +1,11 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
-#include "ITradingEngineServer.h"
+#include "TradingEngineServer.h"
 
-void ITradingEngineServer::run_trading_engine() {
-    if (get_num_threads() <= 0) {
-        // log error;
-        return;
-    }
-
+void TradingEngineServer::run_trading_engine() {
     try {
-        start_server(7878);
+        start_server(config_->getPort());
     }
     catch (std::exception& e) {
         // log error;
@@ -18,7 +13,7 @@ void ITradingEngineServer::run_trading_engine() {
     }
 }
 
-void ITradingEngineServer::handle_server_connection(tcp::socket socket) {
+void TradingEngineServer::handle_server_connection(tcp::socket socket) {
     std::stringstream ss;
     // can probably log here for indepedent workers.
 

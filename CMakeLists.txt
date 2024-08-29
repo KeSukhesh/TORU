@@ -18,7 +18,7 @@ add_executable(TradingEngineServer
     src/main.cpp
     src/trading_engine/TradingEngineServer.cpp
     src/background_service/BackgroundService.cpp
-    include/trading_engine_threadpool/ThreadPool.cpp
+    src/background_service/ThreadPool.cpp
 )
 
 target_link_libraries(TradingEngineServer
