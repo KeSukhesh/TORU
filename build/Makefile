@@ -129,53 +129,101 @@ TradingEngineServer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/build
 .PHONY : TradingEngineServer/fast
 
-include/core/trading_engine_threadpool/ThreadPool.o: include/core/trading_engine_threadpool/ThreadPool.cpp.o
-.PHONY : include/core/trading_engine_threadpool/ThreadPool.o
+src/background_service/BackgroundService.o: src/background_service/BackgroundService.cpp.o
+.PHONY : src/background_service/BackgroundService.o
 
 # target to build an object file
-include/core/trading_engine_threadpool/ThreadPool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.o
-.PHONY : include/core/trading_engine_threadpool/ThreadPool.cpp.o
+src/background_service/BackgroundService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/background_service/BackgroundService.cpp.o
+.PHONY : src/background_service/BackgroundService.cpp.o
 
-include/core/trading_engine_threadpool/ThreadPool.i: include/core/trading_engine_threadpool/ThreadPool.cpp.i
-.PHONY : include/core/trading_engine_threadpool/ThreadPool.i
+src/background_service/BackgroundService.i: src/background_service/BackgroundService.cpp.i
+.PHONY : src/background_service/BackgroundService.i
 
 # target to preprocess a source file
-include/core/trading_engine_threadpool/ThreadPool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.i
-.PHONY : include/core/trading_engine_threadpool/ThreadPool.cpp.i
+src/background_service/BackgroundService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/background_service/BackgroundService.cpp.i
+.PHONY : src/background_service/BackgroundService.cpp.i
 
-include/core/trading_engine_threadpool/ThreadPool.s: include/core/trading_engine_threadpool/ThreadPool.cpp.s
-.PHONY : include/core/trading_engine_threadpool/ThreadPool.s
+src/background_service/BackgroundService.s: src/background_service/BackgroundService.cpp.s
+.PHONY : src/background_service/BackgroundService.s
 
 # target to generate assembly for a file
-include/core/trading_engine_threadpool/ThreadPool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/include/core/trading_engine_threadpool/ThreadPool.cpp.s
-.PHONY : include/core/trading_engine_threadpool/ThreadPool.cpp.s
+src/background_service/BackgroundService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/background_service/BackgroundService.cpp.s
+.PHONY : src/background_service/BackgroundService.cpp.s
 
-src/core/tradingengine/TradingEngineServer.o: src/core/tradingengine/TradingEngineServer.cpp.o
-.PHONY : src/core/tradingengine/TradingEngineServer.o
+src/background_service/ThreadPool.o: src/background_service/ThreadPool.cpp.o
+.PHONY : src/background_service/ThreadPool.o
 
 # target to build an object file
-src/core/tradingengine/TradingEngineServer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.o
-.PHONY : src/core/tradingengine/TradingEngineServer.cpp.o
+src/background_service/ThreadPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/background_service/ThreadPool.cpp.o
+.PHONY : src/background_service/ThreadPool.cpp.o
 
-src/core/tradingengine/TradingEngineServer.i: src/core/tradingengine/TradingEngineServer.cpp.i
-.PHONY : src/core/tradingengine/TradingEngineServer.i
+src/background_service/ThreadPool.i: src/background_service/ThreadPool.cpp.i
+.PHONY : src/background_service/ThreadPool.i
 
 # target to preprocess a source file
-src/core/tradingengine/TradingEngineServer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.i
-.PHONY : src/core/tradingengine/TradingEngineServer.cpp.i
+src/background_service/ThreadPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/background_service/ThreadPool.cpp.i
+.PHONY : src/background_service/ThreadPool.cpp.i
 
-src/core/tradingengine/TradingEngineServer.s: src/core/tradingengine/TradingEngineServer.cpp.s
-.PHONY : src/core/tradingengine/TradingEngineServer.s
+src/background_service/ThreadPool.s: src/background_service/ThreadPool.cpp.s
+.PHONY : src/background_service/ThreadPool.s
 
 # target to generate assembly for a file
-src/core/tradingengine/TradingEngineServer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/core/tradingengine/TradingEngineServer.cpp.s
-.PHONY : src/core/tradingengine/TradingEngineServer.cpp.s
+src/background_service/ThreadPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/background_service/ThreadPool.cpp.s
+.PHONY : src/background_service/ThreadPool.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/trading_engine/TradingEngineServer.o: src/trading_engine/TradingEngineServer.cpp.o
+.PHONY : src/trading_engine/TradingEngineServer.o
+
+# target to build an object file
+src/trading_engine/TradingEngineServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/trading_engine/TradingEngineServer.cpp.o
+.PHONY : src/trading_engine/TradingEngineServer.cpp.o
+
+src/trading_engine/TradingEngineServer.i: src/trading_engine/TradingEngineServer.cpp.i
+.PHONY : src/trading_engine/TradingEngineServer.i
+
+# target to preprocess a source file
+src/trading_engine/TradingEngineServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/trading_engine/TradingEngineServer.cpp.i
+.PHONY : src/trading_engine/TradingEngineServer.cpp.i
+
+src/trading_engine/TradingEngineServer.s: src/trading_engine/TradingEngineServer.cpp.s
+.PHONY : src/trading_engine/TradingEngineServer.s
+
+# target to generate assembly for a file
+src/trading_engine/TradingEngineServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TradingEngineServer.dir/build.make CMakeFiles/TradingEngineServer.dir/src/trading_engine/TradingEngineServer.cpp.s
+.PHONY : src/trading_engine/TradingEngineServer.cpp.s
 
 # Help Target
 help:
@@ -186,12 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TradingEngineServer"
-	@echo "... include/core/trading_engine_threadpool/ThreadPool.o"
-	@echo "... include/core/trading_engine_threadpool/ThreadPool.i"
-	@echo "... include/core/trading_engine_threadpool/ThreadPool.s"
-	@echo "... src/core/tradingengine/TradingEngineServer.o"
-	@echo "... src/core/tradingengine/TradingEngineServer.i"
-	@echo "... src/core/tradingengine/TradingEngineServer.s"
+	@echo "... src/background_service/BackgroundService.o"
+	@echo "... src/background_service/BackgroundService.i"
+	@echo "... src/background_service/BackgroundService.s"
+	@echo "... src/background_service/ThreadPool.o"
+	@echo "... src/background_service/ThreadPool.i"
+	@echo "... src/background_service/ThreadPool.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/trading_engine/TradingEngineServer.o"
+	@echo "... src/trading_engine/TradingEngineServer.i"
+	@echo "... src/trading_engine/TradingEngineServer.s"
 .PHONY : help
 
 
