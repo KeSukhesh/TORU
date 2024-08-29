@@ -13,7 +13,7 @@ using boost::asio::ip::tcp;
 
 class BackgroundService {
 public:
-    BackgroundService();
+    BackgroundService() = default;
 
 protected:
     virtual void start_server();

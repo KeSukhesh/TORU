@@ -1,0 +1,4 @@
+{
+    "Port": 7878,
+    "NumberOfThreadsInPool": 4
+}

@@ -30,7 +30,7 @@ private:
             configFile >> configJson;
 
             port_ = configJson.value("Port", 7878);
-            numberOfThreads_ = configJson.value("NumberOfThreads", 1);
+            numberOfThreads_ = configJson.value("NumberOfThreadsInPool", 1);
         } else {
             std::cerr << "Unable to open config file: " << configFilePath << std::endl;
             port_ = 7878;
