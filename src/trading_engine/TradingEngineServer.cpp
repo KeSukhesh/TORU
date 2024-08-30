@@ -6,20 +6,16 @@
 void TradingEngineServer::run_trading_engine() {
     try {
         ServerConfiguration config = get_server_config();
-        set_server_port(config.getPort());
-        set_num_threads(config.getNumberOfThreads());
+        get_logger()->logInfo("Multithreaded Server Running with " + std::to_string(config.get_number_of_threads()) + " Threads...");
         start_server();
+        stop_server();
     }
     catch (std::exception& e) {
-        // log error;
-        return;
+        get_logger()->logError("Could Not Run Trading Engine", e);
     }
 }
 
 void TradingEngineServer::handle_server_connection(tcp::socket socket) {
-    std::stringstream ss;
-    // can probably log here for indepedent workers.
-
     try {
         boost::asio::streambuf buffer;
         std::istream input_stream(&buffer);
@@ -29,6 +25,10 @@ void TradingEngineServer::handle_server_connection(tcp::socket socket) {
         if (!request_line.empty() && request_line.back() == '\r') {
             request_line.pop_back();
         }
+
+        std::ostringstream oss;
+        oss << std::this_thread::get_id();
+        get_logger()->logInfo("Worker Thread ID: " + oss.str() + " - Request Receieved: " + request_line);
 
         std::string status_line;
         std::string filename;
@@ -53,10 +53,10 @@ void TradingEngineServer::handle_server_connection(tcp::socket socket) {
         std::string contents = read_file_to_string(filename);
         std::string length = std::to_string(contents.size());
         std::string response = status_line + "\r\nContent-Length: " + length + "\r\n\r\n" + contents;
+        get_logger()->logInfo("Worker Thread ID: " + oss.str() + " - Responded With: " + status_line);
         boost::asio::write(socket, boost::asio::buffer(response));
     }
     catch (std::exception& e) {
-        // log
-        // std::cerr << "Error: " << e.what() << std::endl;
+        get_logger()->logError("Could Not Read Request in handle_server_connection()", e);
     }
 }
