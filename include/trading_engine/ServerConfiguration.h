@@ -16,12 +16,13 @@ public:
     }
 
     int getNumberOfThreads() const {
-        return numberOfThreads_;
+        return number_of_threads_;
     }
 
 private:
     int port_;
-    int numberOfThreads_;
+    int number_of_threads_;
+    std::string exit_flag_;
 
     void parseConfigFile(const std::string& configFilePath) {
         std::ifstream configFile(configFilePath);
@@ -30,11 +31,12 @@ private:
             configFile >> configJson;
 
             port_ = configJson.value("Port", 7878);
-            numberOfThreads_ = configJson.value("NumberOfThreadsInPool", 1);
+            number_of_threads_ = configJson.value("NumberOfThreadsInPool", 1);
+            exit_flag_ = configJson.value("ServerCloseFlag", "E");
         } else {
             std::cerr << "Unable to open config file: " << configFilePath << std::endl;
             port_ = 7878;
-            numberOfThreads_ = 1;
+            number_of_threads_ = 1;
         }
     }
 };

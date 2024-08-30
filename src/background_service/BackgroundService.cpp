@@ -4,13 +4,32 @@ void BackgroundService::start_server() {
     ThreadPool pool(num_threads_);
     boost::asio::io_context io_context;
     tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port_));
-    while(true) {
+
+    std::thread input_thread(&BackgroundService::monitor_user_input, this);
+
+    while (!close_flag_) {
         auto socket = std::make_shared<tcp::socket>(io_context);
-        acceptor.accept(*socket);
+        boost::system::error_code ec;
+        acceptor.accept(*socket, ec);
+
+        if (ec) {
+            if (close_flag_) {
+                get_logger()->logInfo("Server is finalising last requests and then shutting down...");
+                acceptor.close();
+                io_context.stop();
+            } else {
+                get_logger()->logError("Error accepting connection", std::runtime_error(ec.message()));
+            }
+            break;
+        }
 
         pool.execute([this, socket]() mutable {
             handle_server_connection(std::move(*socket));
         });
+    }
+
+    if (input_thread.joinable()) {
+        input_thread.join();
     }
 }
 
@@ -57,5 +76,16 @@ std::string BackgroundService::read_file_to_string(const std::string& filename) 
 }
 
 void BackgroundService::stop_server() {
-    // probably log?
+    get_logger()->logInfo("Server has Shut Down.");
+}
+
+void BackgroundService::monitor_user_input() {
+    char input;
+    while (!close_flag_) {
+        std::cin >> input;
+        if (input == 'E') {
+            get_logger()->logInfo("Shutdown Signal Received, Finalising Last Requests...");
+            close_flag_ = true;
+        }
+    }
 }

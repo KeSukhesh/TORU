@@ -14,13 +14,14 @@ using boost::asio::ip::tcp;
 
 class BackgroundService {
 public:
-    BackgroundService(const std::string& logFilePath) : logger_(std::make_unique<FileLogger>(logFilePath)) {}
+    BackgroundService(const std::string& logFilePath) : logger_(std::make_unique<FileLogger>(logFilePath)), close_flag_(false) {}
 
 protected:
     virtual void start_server();
     virtual void stop_server();
     virtual std::string read_file_to_string(const std::string& filename);
     virtual void handle_server_connection(tcp::socket socket);
+    void monitor_user_input();
 
     int get_num_threads() { return num_threads_; }
     void set_num_threads(int num_threads) { num_threads_ = num_threads; }
@@ -33,4 +34,5 @@ private:
     int num_threads_ = 1;
     int port_ = 7878;
     std::unique_ptr<FileLogger> logger_;
+    std::atomic<bool> close_flag_;
 };

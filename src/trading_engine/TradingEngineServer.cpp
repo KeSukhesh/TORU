@@ -10,9 +10,10 @@ void TradingEngineServer::run_trading_engine() {
         set_num_threads(config.getNumberOfThreads());
         get_logger()->logInfo("Multithreaded Server Running with " + std::to_string(config.getNumberOfThreads()) + " Threads...");
         start_server();
+        stop_server();
     }
     catch (std::exception& e) {
-        get_logger()->logError("Could Not Start Server", e);
+        get_logger()->logError("Could Not Run Trading Engine", e);
     }
 }
 
