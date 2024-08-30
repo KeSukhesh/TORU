@@ -86,7 +86,7 @@ Trades Orderbook::match_orders() {
 }
 
 Trades Orderbook::add_order(OrderPointer order) {
-	std::scoped_lock ordersLock( orders_mutex_ );
+	std::scoped_lock ordersLock(orders_mutex_);
 
 	if (orders_.contains(order->get_order_id()))
 		return { };
