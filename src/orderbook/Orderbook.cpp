@@ -124,5 +124,31 @@ Trades Orderbook::add_order(OrderPointer order) {
 	on_order_added(order);
 
 	return match_orders();
+}
 
+void Orderbook::cancel_order_internal(OrderId order_id) {
+	if (!orders_.contains(order_id))
+		return;
+
+	const auto [order, iterator] = orders_.at(order_id);
+	orders_.erase(order_id);
+
+	if (order->get_side() == SideType::SELL)
+	{
+		auto price = order->get_price();
+		auto& orders = asks_.at(price);
+		orders.erase(iterator);
+		if (orders.empty())
+			asks_.erase(price);
+	}
+	else
+	{
+		auto price = order->get_price();
+		auto& orders = bids_.at(price);
+		orders.erase(iterator);
+		if (orders.empty())
+			bids_.erase(price);
+	}
+
+	on_order_cancelled(order);
 }
