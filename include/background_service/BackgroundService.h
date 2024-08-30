@@ -16,7 +16,10 @@ using boost::asio::ip::tcp;
 class BackgroundService {
 public:
     BackgroundService(const std::string& log_file_path, const std::string& config_file_path)
-    : logger_(std::make_unique<FileLogger>(log_file_path)), config_(ServerConfiguration(config_file_path)), close_flag_(false) {}
+        : logger_(std::make_unique<FileLogger>(log_file_path))
+        , config_(ServerConfiguration(config_file_path))
+        , close_flag_(false)
+    {}
 
 protected:
     virtual void start_server();
