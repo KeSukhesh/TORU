@@ -1,9 +1,9 @@
 #include "background_service/BackgroundService.h"
 
 void BackgroundService::start_server() {
-    ThreadPool pool(num_threads_);
+    ThreadPool pool(config_.get_number_of_threads());
     boost::asio::io_context io_context;
-    tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port_));
+    tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), config_.get_port()));
 
     std::thread input_thread(&BackgroundService::monitor_user_input, this);
 
@@ -80,10 +80,10 @@ void BackgroundService::stop_server() {
 }
 
 void BackgroundService::monitor_user_input() {
-    char input;
+    std::string input;
     while (!close_flag_) {
         std::cin >> input;
-        if (input == 'E') {
+        if (input == config_.get_exit_flag()) {
             get_logger()->logInfo("Shutdown Signal Received, Finalising Last Requests...");
             close_flag_ = true;
         }

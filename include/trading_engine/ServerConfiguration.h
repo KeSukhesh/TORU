@@ -8,15 +8,19 @@
 class ServerConfiguration {
 public:
     ServerConfiguration(const std::string& configFilePath) {
-        parseConfigFile(configFilePath);
+        parse_config_file(configFilePath);
     }
 
-    int getPort() const {
+    int get_port() const {
         return port_;
     }
 
-    int getNumberOfThreads() const {
+    int get_number_of_threads() const {
         return number_of_threads_;
+    }
+
+    std::string get_exit_flag() const {
+        return exit_flag_;
     }
 
 private:
@@ -24,17 +28,17 @@ private:
     int number_of_threads_;
     std::string exit_flag_;
 
-    void parseConfigFile(const std::string& configFilePath) {
-        std::ifstream configFile(configFilePath);
-        if (configFile.is_open()) {
-            nlohmann::json configJson;
-            configFile >> configJson;
+    void parse_config_file(const std::string& config_file_path) {
+        std::ifstream config_file(config_file_path);
+        if (config_file.is_open()) {
+            nlohmann::json config_json;
+            config_file >> config_json;
 
-            port_ = configJson.value("Port", 7878);
-            number_of_threads_ = configJson.value("NumberOfThreadsInPool", 1);
-            exit_flag_ = configJson.value("ServerCloseFlag", "E");
+            port_ = config_json.value("Port", 7878);
+            number_of_threads_ = config_json.value("NumberOfThreadsInPool", 1);
+            exit_flag_ = config_json.value("ServerCloseFlag", "E");
         } else {
-            std::cerr << "Unable to open config file: " << configFilePath << std::endl;
+            std::cerr << "Unable to open config file: " << config_file_path << std::endl;
             port_ = 7878;
             number_of_threads_ = 1;
         }
