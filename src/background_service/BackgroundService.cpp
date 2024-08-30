@@ -4,8 +4,6 @@ void BackgroundService::start_server() {
     ThreadPool pool(num_threads_);
     boost::asio::io_context io_context;
     tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), port_));
-    // log start
-    // std::cout << "Multithreaded Server Running with " << num_threads_ << " threads..." << std::endl;
     while(true) {
         auto socket = std::make_shared<tcp::socket>(io_context);
         acceptor.accept(*socket);
@@ -18,9 +16,6 @@ void BackgroundService::start_server() {
 
 // base method to get overriden
 void BackgroundService::handle_server_connection(tcp::socket socket) {
-    std::stringstream ss;
-    // can probably log here for indepedent workers.
-
     try {
         boost::asio::streambuf buffer;
         std::istream input_stream(&buffer);
@@ -31,17 +26,22 @@ void BackgroundService::handle_server_connection(tcp::socket socket) {
             request_line.pop_back();
         }
 
+        std::ostringstream oss;
+        oss << std::this_thread::get_id();
+        get_logger()->logInfo("Worker Thread ID: " + oss.str() + " - Request Receieved: " + request_line);
+
+
         std::string status_line = "HTTP/1.1 200 OK";
         std::string filename = "../src/util/hello.html";
 
         std::string contents = read_file_to_string(filename);
         std::string length = std::to_string(contents.size());
         std::string response = status_line + "\r\nContent-Length: " + length + "\r\n\r\n" + contents;
+        get_logger()->logInfo("Worker Thread ID: " + oss.str() + " - Responded With: " + status_line);
         boost::asio::write(socket, boost::asio::buffer(response));
     }
     catch (std::exception& e) {
-        // log
-        // std::cerr << "Error: " << e.what() << std::endl;
+        get_logger()->logError("Could Not Read Request in handle_server_connection()", e);
     }
 }
 

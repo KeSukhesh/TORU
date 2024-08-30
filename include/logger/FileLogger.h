@@ -1,14 +1,17 @@
 #pragma once
 
 #include "Logger.h"
+#include <fstream>
+#include <mutex>
+#include <stdexcept>
+#include <iostream>
 
 class FileLogger : public Logger
 {
 public:
-    FileLogger(const std::string& filename) : logFile_(filename, std::ios::app) {
-        if (!logFile_.is_open()) {
-            throw std::runtime_error("Unable to open log file");
-        }
+    FileLogger(const std::string& filename) {
+        // Open in trunc mode to clear the file // Open in trunc mode to clear the file
+        openLogFile(filename, std::ios::trunc);
     }
 
     ~FileLogger() {
@@ -18,10 +21,8 @@ public:
     }
 
     void setLogFile(const std::string& filename) {
-        logFile_.open(filename, std::ios::app);
-        if (!logFile_.is_open()) {
-            throw std::runtime_error("Unable to open log file");
-        }
+        // Open in append mode for subsequent use
+        openLogFile(filename, std::ios::app);
     }
 
 protected:
@@ -34,11 +35,17 @@ protected:
                 logFile_ << formattedMessage; // File logging
                 logFile_.flush();
             }
-
         }
     }
 
 private:
+    void openLogFile(const std::string& filename, std::ios_base::openmode mode) {
+        logFile_.open(filename, mode);
+        if (!logFile_.is_open()) {
+            throw std::runtime_error("Unable to open log file");
+        }
+    }
+
     std::ofstream logFile_;
     std::mutex logMutex;
 };
