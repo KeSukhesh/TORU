@@ -6,11 +6,13 @@ if(POLICY CMP0167)
 endif()
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(${PROJECT_SOURCE_DIR}/include/)
 include_directories(${PROJECT_SOURCE_DIR}/include/trading_engine)
 include_directories(${PROJECT_SOURCE_DIR}/include/background_service)
 include_directories(${PROJECT_SOURCE_DIR}/include/logger)
+include_directories(${PROJECT_SOURCE_DIR}/include/orderbook)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system)
@@ -20,6 +22,7 @@ add_executable(TradingEngineServer
     src/trading_engine/TradingEngineServer.cpp
     src/background_service/BackgroundService.cpp
     src/background_service/ThreadPool.cpp
+    src/orderbook/Orderbook.cpp
 )
 
 target_link_libraries(TradingEngineServer
